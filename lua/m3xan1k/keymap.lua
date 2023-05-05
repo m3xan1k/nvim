@@ -47,3 +47,10 @@ vim.keymap.set('n', '<leader>c', ':bdelete!<CR>', opts)
 
 -- no highlight
 vim.keymap.set('n', '<leader>h', ':noh<CR>', opts)
+
+-- bufferline
+vim.keymap.set('n', '<C-h>', ':BufferLineCyclePrev<CR>', opts)
+vim.keymap.set('n', '<C-l>', ':BufferLineCycleNext<CR>', opts)
+vim.keymap.set('n', '<C-A-h>', ':BufferLineMovePrev<CR>', opts)
+vim.keymap.set('n', '<C-A-l>', ':BufferLineMoveNext<CR>', opts)
+

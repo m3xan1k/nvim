@@ -145,13 +145,6 @@ return packer.startup(function(use)
     }
 
     use {
-        'nvim-tree/nvim-tree.lua',
-        config = function()
-            require('nvim-tree').setup()
-        end
-    }
-
-    use {
         "folke/which-key.nvim",
         config = function()
             vim.o.timeout = true
