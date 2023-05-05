@@ -131,6 +131,11 @@ return packer.startup(function(use)
     use 'tpope/vim-surround'
 
     use {
+        'ms-jpq/chadtree',
+        branch = 'chad'
+    }
+
+    use {
         "windwp/nvim-autopairs",
         config = function() 
             require("nvim-autopairs").setup {}
