@@ -28,8 +28,7 @@ local options = {
     timeoutlen = 500,          -- wait for keysequence
     writebackup = false,        -- don't create backup copy
     --colorcolumn = '80'
-    guifont = 'Roboto Mono:h15',
-    linespace = 2,
+    guifont = 'Roboto Mono:h16:#e-subpixelantialias:#h-none',
 }
 
 for k, v in pairs(options) do
