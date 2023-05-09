@@ -43,9 +43,6 @@ lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 -- pyright
 lspconfig.pyright.setup({
     settings = {
-        -- pyright = {
-        --     disableLanguageServices = true,
-        -- },
         python = {
             analysis = {
                 diagnosticMode = "openFilesOnly",
