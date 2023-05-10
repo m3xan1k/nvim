@@ -130,10 +130,8 @@ return packer.startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'tpope/vim-surround'
 
-    use {
-        'ms-jpq/chadtree',
-        branch = 'chad'
-    }
+    use 'preservim/nerdtree' 
+    use 'Xuyuanp/nerdtree-git-plugin'
 
     use {
         "windwp/nvim-autopairs",

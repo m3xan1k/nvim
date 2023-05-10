@@ -40,7 +40,7 @@ vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 -- toggle file tree
-vim.keymap.set('n', '<leader>e', ':CHADopen<CR>', opts)
+vim.keymap.set('n', '<leader>e', ':NERDTreeToggle<CR>', opts)
 
 -- close buffer tab
 vim.keymap.set('n', '<leader>c', ':bdelete!<CR>', opts)
