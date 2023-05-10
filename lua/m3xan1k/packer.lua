@@ -33,11 +33,13 @@ packer.init({
 return packer.startup(function(use)
     use 'wbthomason/packer.nvim'    -- Packer can manage itself
     use 'nvim-lua/popup.nvim'       -- Popup API for Neovim
-    use 'nvim-lua/plenary.nvim'     -- Useful lua functions used by lots of pluginsjk
+    use 'nvim-lua/plenary.nvim'     -- Useful lua functions used by lots of plugins
 
-    -- UI
+    -- TOOLS
+    use 'nvim-telescope/telescope.nvim'
+
     use 'm3xan1k/simple'		-- my colorscheme
-    use 'ntk148v/komau.vim'
+
     use {
         'akinsho/bufferline.nvim',
         tag = "*",
@@ -100,7 +102,7 @@ return packer.startup(function(use)
         end
     }
 
-    -- LSP
+        -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -125,17 +127,12 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
 
-    -- TOOLS
-    use 'nvim-telescope/telescope.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'tpope/vim-surround'
 
-    use 'preservim/nerdtree' 
-    use 'Xuyuanp/nerdtree-git-plugin'
-
     use {
         "windwp/nvim-autopairs",
-        config = function() 
+        config = function()
             require("nvim-autopairs").setup {}
         end
     }
@@ -159,21 +156,42 @@ return packer.startup(function(use)
         end
     }
 
+    use 'mbbill/undotree'
+    use 'rmagatti/auto-session'
+    use 'RRethy/vim-illuminate'
+    use 'nvim-treesitter/nvim-treesitter'
+
+    use {
+      "kevinhwang91/nvim-ufo",
+      requires = {
+        "kevinhwang91/promise-async",
+        {
+          "luukvbaal/statuscol.nvim",
+          config = function()
+            local builtin = require("statuscol.builtin")
+            require("statuscol").setup(
+              {
+                relculright = true,
+                segments = {
+                  {text = {builtin.foldfunc}, click = "v:lua.ScFa"},
+                  {text = {"%s"}, click = "v:lua.ScSa"},
+                  {text = {builtin.lnumfunc, " "}, click = "v:lua.ScLa"}
+                }
+              }
+            )
+          end
+
+        }
+      }
+    }
+
     use {
         'f-person/git-blame.nvim',
         config = function()
             vim.g.gitblame_delay = 1000
         end
     }
-    use 'jubnzv/virtual-types.nvim'
-    use 'mbbill/undotree'
-    use 'rmagatti/auto-session'
-    use 'RRethy/vim-illuminate'
 
-    use 'nvim-treesitter/nvim-treesitter'
-    use {
-        'kevinhwang91/nvim-ufo',
-        requires = 'kevinhwang91/promise-async',
-    }
-    use 'luukvbaal/statuscol.nvim'
+    use 'preservim/nerdtree' 
+
 end)
