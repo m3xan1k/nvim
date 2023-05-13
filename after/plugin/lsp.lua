@@ -6,6 +6,8 @@ local lsp = require('lsp-zero').preset({
     configure_diagnostics = false,
 })
 
+local lsp_signature = require('lsp_signature')
+
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps(
         {
@@ -13,6 +15,15 @@ lsp.on_attach(function(client, bufnr)
             preserve_mappings = false
         }
     )
+    lsp_signature.on_attach(
+        {
+            bind = true, -- This is mandatory, otherwise border config won't get registered.
+            handler_opts = {
+                border = "rounded"
+            },
+            hint_prefix = "λ "
+        },
+        bufnr)
 end)
 
 local sign = function(opts)
