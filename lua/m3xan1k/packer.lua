@@ -192,10 +192,15 @@ return packer.startup(function(use)
         end
     }
 
-    use 'preservim/nerdtree' 
+    use 'preservim/nerdtree'
 
     use {
         "ray-x/lsp_signature.nvim",
     }
+
+    -- repl for CL
+    use 'kovisoft/slimv'
+
+    use 'ntpeters/vim-better-whitespace'
 
 end)
