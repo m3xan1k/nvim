@@ -1,5 +1,5 @@
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fk', builtin.keymaps, {})
 vim.keymap.set('n', '<leader>fc', builtin.grep_string, {})
@@ -16,7 +16,7 @@ telescope.setup {
             "--with-filename",
             "--line-number",
             "--column",
-            "--smart-case", 
+            "--smart-case",
         },
         layout_strategy = "vertical",
         layout_config = {

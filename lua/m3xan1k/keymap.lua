@@ -54,3 +54,5 @@ vim.keymap.set('n', '<C-l>', ':BufferLineCycleNext<CR>', opts)
 vim.keymap.set('n', '<C-A-h>', ':BufferLineMovePrev<CR>', opts)
 vim.keymap.set('n', '<C-A-l>', ':BufferLineMoveNext<CR>', opts)
 
+-- outline
+vim.keymap.set('n', '<leader>fo', ':SymbolsOutline<CR>', opts)

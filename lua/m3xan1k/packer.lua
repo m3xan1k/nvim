@@ -203,4 +203,11 @@ return packer.startup(function(use)
 
     use 'ntpeters/vim-better-whitespace'
 
+    -- use 'simrat39/symbols-outline.nvim'
+
+    -- use {
+    --     'mg979/vim-visual-multi',
+    --     branch = 'master',
+    -- }
+
 end)
