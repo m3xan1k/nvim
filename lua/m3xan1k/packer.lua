@@ -63,16 +63,7 @@ return packer.startup(function(use)
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-        config = function()
-            require('lualine').setup({
-                options = {
-                    theme = 'gruvbox-material',
-                    section_separators = '',
-                    component_separators = '',
-                }
-            })
-        end
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     use("petertriho/nvim-scrollbar")
@@ -185,13 +176,6 @@ return packer.startup(function(use)
       }
     }
 
-    use {
-        'f-person/git-blame.nvim',
-        config = function()
-            vim.g.gitblame_delay = 1000
-        end
-    }
-
     use 'preservim/nerdtree'
 
     use {
@@ -209,5 +193,7 @@ return packer.startup(function(use)
     --     'mg979/vim-visual-multi',
     --     branch = 'master',
     -- }
+
+    use 'vimwiki/vimwiki'
 
 end)
