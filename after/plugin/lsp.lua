@@ -51,6 +51,8 @@ local lspconfig = require('lspconfig')
 -- (Optional) Configure lua language server for neovim
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 
+lspconfig.clangd.setup({})
+
 -- pyright
 lspconfig.pyright.setup({
     settings = {
