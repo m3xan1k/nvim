@@ -46,7 +46,7 @@ vim.keymap.set('n', '<leader>e', ':NERDTreeToggle<CR>', opts)
 vim.keymap.set('n', '<leader>c', ':bdelete!<CR>', opts)
 
 -- no highlight
-vim.keymap.set('n', '<leader>h', ':noh<CR>', opts)
+vim.keymap.set('n', '<leader>nh', ':noh<CR>', opts)
 
 -- bufferline
 vim.keymap.set('n', '<C-h>', ':BufferLineCyclePrev<CR>', opts)
@@ -56,3 +56,8 @@ vim.keymap.set('n', '<C-A-l>', ':BufferLineMoveNext<CR>', opts)
 
 -- outline
 vim.keymap.set('n', '<leader>fo', ':SymbolsOutline<CR>', opts)
+
+-- rest-nvim
+vim.keymap.set('n', '<leader>rr', '<Plug>RestNvim<CR>', opts)
+vim.keymap.set('n', '<leader>rp', '<Plug>RestNvimPreview<CR>', opts)
+vim.keymap.set('n', '<leader>rl', '<Plug>RestNvimLast<CR>', opts)

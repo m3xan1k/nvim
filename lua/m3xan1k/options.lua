@@ -69,3 +69,5 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.tabstop = 2
 	end
 })
+
+vim.cmd("let g:vimwiki_list = [{'path': '~/Yandex.Disk/vimwiki'}]")

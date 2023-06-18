@@ -150,7 +150,14 @@ return packer.startup(function(use)
     use 'mbbill/undotree'
     use 'rmagatti/auto-session'
     use 'RRethy/vim-illuminate'
-    use 'nvim-treesitter/nvim-treesitter'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require('nvim-treesitter').setup({
+                ensure_installed = { 'http', 'json' }
+            })
+        end
+    }
 
     use {
       "kevinhwang91/nvim-ufo",
@@ -195,5 +202,10 @@ return packer.startup(function(use)
     -- }
 
     use 'vimwiki/vimwiki'
+
+    use {
+        "rest-nvim/rest.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    }
 
 end)
