@@ -57,7 +57,3 @@ vim.keymap.set('n', '<C-A-l>', ':BufferLineMoveNext<CR>', opts)
 -- outline
 vim.keymap.set('n', '<leader>fo', ':SymbolsOutline<CR>', opts)
 
--- rest-nvim
-vim.keymap.set('n', '<leader>rr', '<Plug>RestNvim<CR>', opts)
-vim.keymap.set('n', '<leader>rp', '<Plug>RestNvimPreview<CR>', opts)
-vim.keymap.set('n', '<leader>rl', '<Plug>RestNvimLast<CR>', opts)

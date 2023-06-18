@@ -203,9 +203,4 @@ return packer.startup(function(use)
 
     use 'vimwiki/vimwiki'
 
-    use {
-        "rest-nvim/rest.nvim",
-        requires = { "nvim-lua/plenary.nvim" },
-    }
-
 end)
