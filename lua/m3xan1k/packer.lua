@@ -203,4 +203,6 @@ return packer.startup(function(use)
 
     use 'vimwiki/vimwiki'
 
+    use 'ryanoasis/vim-devicons'
+
 end)
