@@ -109,12 +109,17 @@ return packer.startup(function(use)
         }
     }
 
+    -- completion path/buffer
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
 
+    -- lsp helper
     use 'jose-elias-alvarez/null-ls.nvim'
+
+    -- surround
     use 'tpope/vim-surround'
 
+    -- auto close braces/ticks
     use {
         "windwp/nvim-autopairs",
         config = function()
@@ -122,6 +127,7 @@ return packer.startup(function(use)
         end
     }
 
+    -- comment helper
     use {
         'terrortylor/nvim-comment',
         config = function()
@@ -129,6 +135,7 @@ return packer.startup(function(use)
         end
     }
 
+    -- which key helper
     use {
         "folke/which-key.nvim",
         config = function()
@@ -141,9 +148,16 @@ return packer.startup(function(use)
         end
     }
 
+    -- rarely using this
     use 'mbbill/undotree'
+
+    -- save/restore session
     use 'rmagatti/auto-session'
+
+    -- highlight symbol under cursor
     use 'RRethy/vim-illuminate'
+
+    -- source code tree parsing
     use {
         'nvim-treesitter/nvim-treesitter',
         config = function()
@@ -153,6 +167,7 @@ return packer.startup(function(use)
         end
     }
 
+    -- need this one to work with json files, it's code blocks folding basically
     use {
       "kevinhwang91/nvim-ufo",
       requires = {
@@ -177,19 +192,23 @@ return packer.startup(function(use)
       }
     }
 
+    -- file tree viewer
     use 'preservim/nerdtree'
 
+    -- highlight function signature
     use {
         "ray-x/lsp_signature.nvim",
     }
 
-    -- repl for CL
+    -- shows trailing whitespaces
     use 'ntpeters/vim-better-whitespace'
 
     -- use 'simrat39/symbols-outline.nvim'
 
+    -- wiki
     use 'vimwiki/vimwiki'
 
+    -- missed icons
     use 'ryanoasis/vim-devicons'
 
 end)
