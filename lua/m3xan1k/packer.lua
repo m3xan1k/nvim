@@ -66,23 +66,17 @@ return packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    use("petertriho/nvim-scrollbar")
-
     use {
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup()
-            require("scrollbar.handlers.gitsigns").setup()
         end
     }
 
     use {
         "kevinhwang91/nvim-hlslens",
         config = function()
-            -- require('hlslens').setup()
-            require("scrollbar.handlers.search").setup({
-                override_lens = function() end,
-        })
+            require('hlslens').setup()
         end,
     }
 
@@ -93,7 +87,7 @@ return packer.startup(function(use)
         end
     }
 
-        -- LSP
+    -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -190,16 +184,9 @@ return packer.startup(function(use)
     }
 
     -- repl for CL
-    use 'kovisoft/slimv'
-
     use 'ntpeters/vim-better-whitespace'
 
     -- use 'simrat39/symbols-outline.nvim'
-
-    -- use {
-    --     'mg979/vim-visual-multi',
-    --     branch = 'master',
-    -- }
 
     use 'vimwiki/vimwiki'
 

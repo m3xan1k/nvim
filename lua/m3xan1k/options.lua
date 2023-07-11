@@ -4,7 +4,7 @@ local options = {
     breakindent = true,         -- Wrap indent to match  line start
     clipboard = 'unnamedplus',  -- allow access to system clipboard
     cursorline = true,          -- highlight current line
-    cmdheight = 1,              -- some more space for messages
+    cmdheight = 0,              -- give me one more line on the screen
     expandtab = true,           -- convert tab to spaces
     hlsearch = true,            -- highlight search
     incsearch = true,           -- append to search
@@ -13,7 +13,7 @@ local options = {
     numberwidth = 4,            -- gutter width
     preserveindent = true,      -- Preserve indent structure as much as possible
     relativenumber = true,      -- show relative line numbers
-    scrolloff = 4,              -- lines rest to start scroll
+    scrolloff = 2,              -- lines rest to start scroll
     showtabline = 2,            -- always show tabs
     shiftwidth = 4,             -- number of spaces for each indentation
     showmode = false,           -- don't show thing like --INSERT in command line
@@ -30,7 +30,7 @@ local options = {
     timeoutlen = 500,           -- wait for keysequence
     writebackup = false,        -- don't create backup copy
     --colorcolumn = '80'
-    guifont = 'Ricty Diminished:h21:#e-subpixelantialias:#h-none',
+    guifont = 'Ricty Diminished:h20:#e-subpixelantialias:#h-none',
     fileencoding = "utf-8",     -- File content encoding for the buffer
     foldenable = true,          -- enable fold for nvim-ufo
     foldlevel = 99,             -- set high foldlevel for nvim-ufo
@@ -70,4 +70,4 @@ vim.api.nvim_create_autocmd("FileType", {
 	end
 })
 
-vim.cmd("let g:vimwiki_list = [{'path': '~/Yandex.Disk/vimwiki'}]")
+vim.cmd("let g:vimwiki_list = [{'path': '~/Yandex.Disk/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]")
