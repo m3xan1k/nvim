@@ -60,6 +60,8 @@ lspconfig.pyright.setup({
             analysis = {
                 diagnosticMode = "openFilesOnly",
                 typeCheckingMode = "basic",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
             }
         }
     }
